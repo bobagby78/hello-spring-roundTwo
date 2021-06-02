@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller //metadata: tells compiler that this is a controller and will do special shit.
 @ResponseBody //will be obsolete later in the class when we're using templates
 @RequestMapping("hello")
-public class HelloController {
+public class HelloSpringController {
 
 //  @GetMapping //will only take GET requests. handled at localhost:8080 with no ext
 
