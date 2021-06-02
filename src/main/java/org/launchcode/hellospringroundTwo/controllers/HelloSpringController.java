@@ -5,10 +5,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller //metadata: tells compiler that this is a controller and will do special shit.
-@RequestMapping("hello")
+//@RequestMapping("hello")
 public class HelloSpringController {
 
-    @RequestMapping(method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(method = {RequestMethod.GET, RequestMethod.POST}, value = "hello")
+    @ResponseBody
     public String hello(@RequestParam String name) {
         return "Hello, " + name;
     }
@@ -19,7 +20,7 @@ public class HelloSpringController {
         return "Hello, " + name + "!";
     }
 
-    @RequestMapping(method = {RequestMethod.GET}, value = "form" )
+    @RequestMapping(method = {RequestMethod.GET}, value = "form")
     public String helloForm(){
         return "form";
 
